@@ -252,8 +252,8 @@ const RegisterPage = () => {
           {step < 3 && <Button onClick={nextStep}>Continuer</Button>}
           {step == 3 && <Button onClick={submit}>Créer</Button>}
           {step == 4 && (
-            <Link href={"/auth/login"}>
-              <Button>Revenir a la page de connexion</Button>
+            <Link href={"/home"}>
+              <Button>Continuer</Button>
             </Link>
           )}
         </CardFooter>

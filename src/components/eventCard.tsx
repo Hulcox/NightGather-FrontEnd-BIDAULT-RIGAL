@@ -23,6 +23,7 @@ interface Event {
     lastname: string;
     username: string;
   };
+  participants: any;
 }
 
 const EventCard = ({
@@ -32,6 +33,7 @@ const EventCard = ({
   numberOfPlaces,
   organizer,
   datetime,
+  participants,
 }: Event) => {
   const fallBackAvatar = `${organizer?.firstname.slice(
     0,
@@ -47,7 +49,10 @@ const EventCard = ({
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <p>Place: {numberOfPlaces}</p>
+        <p>
+          Places restantes: {numberOfPlaces - participants?.length} /{" "}
+          {numberOfPlaces}
+        </p>
         <p>
           Commence le:{" "}
           {DateTime.fromISO(datetime)

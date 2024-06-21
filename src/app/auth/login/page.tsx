@@ -42,7 +42,9 @@ const LoginPage = () => {
           <Link href={"/auth/register"} className="underline text-primary">
             Pas encore de compte ?
           </Link>
-          <Button>connexion</Button>
+          <Link href={"/home"}>
+            <Button>connexion</Button>
+          </Link>
         </CardFooter>
       </Card>
     </div>
